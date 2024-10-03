@@ -1,0 +1,58 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+
+const EXPERIENCE = [
+    {
+        title: "Full-time Project Work  -  ISDI Coders",
+        date: "August 2024",
+        city: "Barcelona, Catalonia, Spain",
+        description:
+            "In the final phase of the bootcamp, I transitioned into a full-time role dedicated to the development of QueerCare, an inclusive healthcare app for the LGBTQI+ communtiy. My responsibilities included managing both the front-end and back-end of the project, developing features, solving technical challenges, and ensuring a smooth user experience. This hands-on project enabled me to apply everything I had learned in the course, from API integration to user interface design, while further strengthening my leadership and teamwork skills.",
+        link: "https://github.com/Samu2196/QueerCare-Project",
+    },
+    {
+        title: "Student  -  ISDI Coders",
+        date: "June 2024 - July 2024",
+        city: "Barcelona, Catalonia, Spain",
+        description:
+            "As a full-time student in the ISDI Coders Bootcamp, I was immersed in an accelerated learning environment that focused on both front-end and back-end development. The curriculum covered technologies like React, Node.js, Express, and MongoDB, while emphasizing agile methodologies and teamwork. I worked on multiple projects and collaborate with a diverse team of 10 developers to build and deploy web applications that challenged me to implement real-world applications, enhancing my problem-solving abilities, code quality, and collaboration in a high-pressure environment.",
+    },
+    {
+        title: "Pre-work Bootcamp  -  ISDI Coders",
+        date: "May 2024",
+        city: "Barcelona, Catalonia, Spain",
+        description:
+            "During the pre-work phase, I dedicated myself to preparing for the intense learning experience ahead. This involved brushing up on foundational programming concepts, such as HTML, CSS, and JavaScript, as well as familiarizing myself with the tools and workflows used in web development. This stage laid the groundwork for the hands-on coding and problem-solving skills I would develop throughout the bootcamp.",
+    },
+    {
+        title: "Career transition",
+        date: "April 2024",
+        description:
+            "As a dynamic and proactive person, I have always sought opportunities for growth and learning. After much reflection, I decided to take the next step in my career and pursue my passion for technology full-time.",
+    },
+    {
+        title: "Social Media Content Moderator  -  Telus International",
+        date: "August 2020 - March 2024",
+        city: "Barcelona, Catalonia, Spain",
+        description:
+            "As a Social Media Content Moderator, I was responsible for ensuring a safe and engaging online environment by carefully reviewing and moderating user-generated content across various social media platforms. My role involved maintaining platform guidelines and community standards while balancing the nuances of cultural sensitivities. I actively analyzed trends and patterns in user behavior to identify potential risks and make strategic improvements in the content moderation processes. Additionally, I collaborated closely with the support team to address user concerns, resolve client issues, and implement effective solutions that contributed to an enhanced user experience. By consistently achieving and monitoring key performance indicators (KPIs), I ensured the delivery of a high-quality service that aligned with both community values and organizational objectives. This experience helped me develop strong attention to detail, excellent problem-solving skills, and a deep understanding of the dynamics of digital communities.",
+    },
+    {
+        title: "Bar Manager  -  Obama Gastropub",
+        date: "March 2019 - March 2020",
+        city: "Barcelona, Catalonia, Spain",
+        description:
+            "During my time as Bar Manager at Obama Gastropub in Barcelona, I oversaw daily operations, managed a diverse team, and ensured high-quality customer service. I implemented strategies to optimize sales, coached staff to enhance performance, and maintained a welcoming atmosphere for both local and international guests. My role involved managing inventory, handling client relations, and maintaining operational efficiency to drive customer satisfaction and business growth.",
+    },
+];
+---
+
+<ol class="relative border-s border-gray-200 ml-3">
+    {
+        EXPERIENCE.map((experience) => (
+            <li class="mb-10 ms-4">
+                <ExperienceItem {...experience} />
+            </li>
+        ))
+    }
+</ol>
