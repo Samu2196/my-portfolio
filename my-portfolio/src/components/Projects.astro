@@ -1,0 +1,120 @@
+---
+import JavascriptIcon from "../icons/JavascriptIcon.astro";
+import HTMLIcon from "../icons/HTMLIcon.astro";
+import CSSIcon from "../icons/CSSIcon.astro";
+import TailwindIcon from "../icons/TailwindIcon.astro";
+import ReactIcon from "../icons/ReactIcon.astro";
+import ExpressIcon from "../icons/ExpressIcon.astro";
+import MongoDBIcon from "../icons/MongoDBIcon.astro";
+import NodejsIcon from "../icons/NodejsIcon.astro";
+
+const TAGS = {
+    JAVASCRIPT: {
+        name: "Javascript",
+        class: "bg-black text-white",
+        icon: JavascriptIcon,
+    },
+    HTML: {
+        name: "HTML",
+        class: "bg-black text-white",
+        icon: HTMLIcon,
+    },
+    CSS: {
+        name: "CSS",
+        class: "bg-black tetx-white",
+        icon: CSSIcon,
+    },
+    TAILWIND: {
+        name: "Tailwind",
+        class: "bg-black text-white",
+        icon: TailwindIcon,
+    },
+    REACT: {
+        name: "React",
+        class: "bg-black text-white",
+        icon: ReactIcon,
+    },
+    EXPRESS: {
+        name: "Express",
+        class: "bg-black text-white",
+        icon: ExpressIcon,
+    },
+    MONGODB: {
+        name: "MongoDB",
+        class: "bg-black text-white",
+        icon: MongoDBIcon,
+    },
+    NODEJS: {
+        name: "Node.js",
+        class: "bg-black text-white",
+        icon: NodejsIcon,
+    },
+};
+const PROJECTS = [
+    {
+        title: "QueerCare",
+        description:
+            "QueerCare is a comprehensive web application dedicated to promoting sexual health and overall wellness within the LGBTQI+ community. Our mission is to provide a supportive, inclusive, and informative platform where individuals can access a wealth of resources, manage their health proactively, and connect with a community of like-minded individuals. By addressing the unique health challenges faced by LGBTQI+ people, QueerCare aims to foster a sense of empowerment, knowledge, and solidarity.",
+        link: "https://github.com/Samu2196/QueerCare-Project",
+        image: "/AppImage.png",
+        tags: [
+            TAGS.JAVASCRIPT,
+            TAGS.HTML,
+            TAGS.CSS,
+            TAGS.TAILWIND,
+            TAGS.REACT,
+            TAGS.EXPRESS,
+            TAGS.MONGODB,
+            TAGS.NODEJS,
+        ],
+    },
+];
+---
+
+{
+    PROJECTS.map(({ title, description, tags, image, link }) => (
+        <article>
+            <h3 class="text-xl font-semibold text-yellow-200 mb-2">{title}</h3>
+            <p class="text-lg mb-4 text-pretty">{description}</p>
+            <ul class="flex gap-x-2 flex-row mb-4">
+                {tags.map((tag) => (
+                    <li>
+                        <span
+                            class={`flex gap-x-2 rounded-full text-sm ${tag.class} py-1 px-2 items-center border border-white/20`}
+                        >
+                            <tag.icon class="size-4" />
+                            {tag.name}
+                        </span>
+                    </li>
+                ))}
+            </ul>
+            <img
+                class="rounded-3xl shadow-2xl shadow-white/30"
+                src={image}
+                alt={`Screenshot of project ${image}`}
+            />
+            <a
+                href={link}
+                class="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-100 focus:text-blue-700 mt-4"
+                target="_blank"
+            >
+                Learn more{" "}
+                <svg
+                    class="w-3 h-3 ms-2 rtl:rotate-180"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 14 10"
+                >
+                    <path
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M1 5h12m0 0L9 1m4 4L9 9"
+                    />
+                </svg>
+            </a>
+        </article>
+    ))
+}

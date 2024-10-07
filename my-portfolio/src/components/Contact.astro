@@ -1,0 +1,36 @@
+---
+import LinkedInIcon from "../icons/LinkedInIcon.astro";
+import WhatsAppIcon from "../icons/WhatsAppIcon.astro";
+import MailIcon from "../icons/MailIcon.astro";
+import SocialPill from "./SocialPill.astro";
+---
+
+<section class="py-6 flex flex-col items-center justify-center">
+    <h2 class="text-4xl font-bold">Get in touch</h2>
+    <div class="flex flex-row gap-4 mt-8">
+        <SocialPill
+            class="flex items-center"
+            href="https://www.linkedin.com/in/samuele-spinetti"
+            target="_blank"
+        >
+            <LinkedInIcon class="lg:size-6 w-5 h-5 mr-2 sm:mr-6" />
+            LinkedIn
+        </SocialPill>
+        <SocialPill
+            class="flex items-center"
+            href="https://wa.me/+34656335032"
+            target="_blank"
+        >
+            <WhatsAppIcon class="lg:size-6 w-5 h-5 mr-2 sm:mr-6" />
+            WhatsApp
+        </SocialPill>
+        <SocialPill
+            class="flex items-center"
+            href="mailto:samuelespinetti@hotmail.com"
+            target="_blank"
+        >
+            <MailIcon class="lg:size-6 w-5 h-5 mr-2 sm:mr-6" />
+            samuelespinetti@hotmail.com
+        </SocialPill>
+    </div>
+</section>

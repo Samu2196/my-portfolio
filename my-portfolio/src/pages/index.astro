@@ -9,6 +9,12 @@ import SocialPill from "../components/SocialPill.astro";
 import Experience from "../components/Experience.astro";
 import Container from "../components/Container.astro";
 import WorkIcon from "../icons/WorkIcon.astro";
+import ProjectIcon from "../icons/ProjectIcon.astro";
+import Projects from "../components/Projects.astro";
+import About from "../components/About.astro";
+import AboutIcon from "../icons/AboutIcon.astro";
+import Contact from "../components/Contact.astro";
+import ContactIcon from "../icons/ContactIcon.astro";
 ---
 
 <Layout
@@ -16,58 +22,91 @@ import WorkIcon from "../icons/WorkIcon.astro";
 	description="Full Stack Web Developer, Passionate Problem Solver and Team Collaborator"
 >
 	<main class="px-4">
-		<Container id="top" class="py-44 pb-20">
-			<img
-				class="rounded-full w-40 h-40 mb-4"
-				src="/profile-photo.jpg"
-				alt="my portfolio photo"
-			/>
-			<h1
-				class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10"
-			>
-				Hey, I'm Samuele <a
-					href="https://www.linkedin.com/in/samuele-spinetti"
-					target="_blank"
-					rel="noopener"
-					class="flex justify-center items-center"
+		<Container id="top" class="py-44 pb-32 flex flex-row">
+			<div>
+				<h1
+					class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10"
 				>
-					<Badge>Open to work</Badge>
-				</a>
-			</h1>
-			<h2 class="text-xl lg:text-2xl opacity-80 text-wrap max-w-[700px]">
-				<span class="text-yellow-200/90">Full Stack Web Developer.</span
+					Hey, I'm Samuele <a
+						href="https://www.linkedin.com/in/samuele-spinetti"
+						target="_blank"
+						rel="noopener"
+						class="flex justify-center items-center"
+					>
+						<Badge>Open to work</Badge>
+					</a>
+				</h1>
+				<h2
+					class="text-xl lg:text-2xl opacity-80 text-wrap max-w-[700px]"
 				>
-				<span class="text-red-200/90"
-					>Italian based in Barcelona, Spain 🇮🇹🇪🇸​
-				</span>
-				<span class="opacity-85">
-					React | Node.js | MongoDB || MERN || Passionate Problem
-					Solver and Team Collaborator
-				</span>
-			</h2>
+					<span class="text-yellow-200/90"
+						>Full Stack Web Developer.</span
+					>
+					<span class="text-red-200/90"
+						>Italian based in Barcelona, Spain 🇮🇹🇪🇸​
+					</span>
+					<span class="opacity-85">
+						React | Node.js | MongoDB || MERN || Passionate Problem
+						Solver and Team Collaborator
+					</span>
+				</h2>
 
-			<nav class="flex gap-x-2 mt-8">
-				<SocialPill href="https://www.linkedin.com/in/samuele-spinetti">
-					<LinkedInIcon class="w-6 h-6" />
-					LinkedIn
-				</SocialPill>
-				<SocialPill href="https://github.com/Samu2196">
-					<GitHubIcon class="w-6 h-6" />
-					GitHub
-				</SocialPill>
-				<SocialPill href="mailto:samuelespinetti@hotmail.com">
-					<MailIcon class="w-6 h-6" />
-					samuelespinetti@hotmail.com
-				</SocialPill>
-			</nav>
+				<nav class="flex gap-4 mt-8 flex-wrap">
+					<SocialPill
+						href="https://www.linkedin.com/in/samuele-spinetti"
+					>
+						<LinkedInIcon class="size-4 lg:size-6" />
+						LinkedIn
+					</SocialPill>
+					<SocialPill href="https://github.com/Samu2196">
+						<GitHubIcon class="size-4 lg:size-6" />
+						GitHub
+					</SocialPill>
+					<SocialPill href="mailto:samuelespinetti@hotmail.com">
+						<MailIcon class="size-4 lg:size-6" />
+						samuelespinetti@hotmail.com
+					</SocialPill>
+				</nav>
+			</div>
+			<div class="flex items-center">
+				<img
+					src="/imgapple.png"
+					alt="Avatar of Samuele"
+					class="rounded-full"
+				/>
+			</div>
+		</Container>
+
+		<Container id="about">
+			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+				<AboutIcon class="size-8" />
+				About me...
+			</h2>
+			<About />
 		</Container>
 
 		<Container id="experience">
-			<h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
 				<WorkIcon class="size-8" />
 				Work Experience
 			</h2>
 			<Experience />
+		</Container>
+
+		<Container id="projects">
+			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+				<ProjectIcon class="size-8" />
+				Projects
+			</h2>
+			<Projects />
+		</Container>
+
+		<Container id="contact">
+			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+				<ContactIcon class="size-8" />
+				Contact me
+			</h2>
+			<Contact />
 		</Container>
 	</main>
 </Layout>
