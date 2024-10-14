@@ -15,6 +15,8 @@ import About from "../components/About.astro";
 import AboutIcon from "../icons/AboutIcon.astro";
 import Contact from "../components/Contact.astro";
 import ContactIcon from "../icons/ContactIcon.astro";
+
+import Emoji from "astro-emoji";
 ---
 
 <Layout
@@ -43,9 +45,11 @@ import ContactIcon from "../icons/ContactIcon.astro";
 						>Full Stack Web Developer.</span
 					>
 					<span class="text-red-200/90"
-						>Italian based in Barcelona, Spain 🇮🇹🇪🇸​
+						>Italian based in Barcelona, Spain
+						<Emoji symbol="🇮🇹" ​ label="italian flag" />
+						<Emoji symbol="🇪🇸" label="spanish flag" />
 					</span>
-					<span class="opacity-85">
+					<span class="text-white/85">
 						React | Node.js | MongoDB || MERN || Passionate Problem
 						Solver and Team Collaborator
 					</span>
@@ -78,7 +82,9 @@ import ContactIcon from "../icons/ContactIcon.astro";
 		</Container>
 
 		<Container id="about">
-			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+			<h2
+				class="text-3xl text-white font-semibold mb-6 flex gap-x-3 items-center"
+			>
 				<AboutIcon class="size-8" />
 				About me...
 			</h2>
@@ -86,7 +92,9 @@ import ContactIcon from "../icons/ContactIcon.astro";
 		</Container>
 
 		<Container id="experience">
-			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+			<h2
+				class="text-3xl text-white font-semibold mb-6 flex gap-x-3 items-center"
+			>
 				<WorkIcon class="size-8" />
 				Work Experience
 			</h2>
@@ -94,7 +102,9 @@ import ContactIcon from "../icons/ContactIcon.astro";
 		</Container>
 
 		<Container id="projects">
-			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+			<h2
+				class="text-3xl text-white font-semibold mb-6 flex gap-x-3 items-center"
+			>
 				<ProjectIcon class="size-8" />
 				Projects
 			</h2>
@@ -102,7 +112,9 @@ import ContactIcon from "../icons/ContactIcon.astro";
 		</Container>
 
 		<Container id="contact">
-			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+			<h2
+				class="text-3xl text-white font-semibold mb-6 flex gap-x-3 items-center"
+			>
 				<ContactIcon class="size-8" />
 				Contact me
 			</h2>
