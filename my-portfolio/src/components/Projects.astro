@@ -7,6 +7,7 @@ import ReactIcon from "../icons/ReactIcon.astro";
 import ExpressIcon from "../icons/ExpressIcon.astro";
 import MongoDBIcon from "../icons/MongoDBIcon.astro";
 import NodejsIcon from "../icons/NodejsIcon.astro";
+import AWSIcon from "../icons/AWSIcon.astro";
 
 const TAGS = {
     JAVASCRIPT: {
@@ -49,6 +50,11 @@ const TAGS = {
         class: "bg-black text-white",
         icon: NodejsIcon,
     },
+    AWS: {
+        name: "AWS",
+        class: "bg-black text-white",
+        icon: AWSIcon,
+    },
 };
 const PROJECTS = [
     {
@@ -68,12 +74,28 @@ const PROJECTS = [
             TAGS.NODEJS,
         ],
     },
+    {
+        title: "Porsche Digital Challenge - Porsche <Connect/>",
+        description:
+            "I am currently collaborating with a multidisciplinary team on a three-month challenge to develop an innovative solution aimed at enhancing customer support and brand experience within the Porsche Digital app. Throughout the project, we've identified key pain points in the app's support system and have been brainstorming customer-centric solutions. Our work involves designing, prototyping, and continuously iterating on concepts to boost user satisfaction. We're ensuring that each solution aligns with Porsche’s brand values, reinforcing customer loyalty and elevating the overall experience. As the project progresses, I’m leading the user testing and feedback processes to refine our approach, and we are preparing to present the final concept to Porsche Digital leadership for potential implementation.",
+        tags: [
+            TAGS.JAVASCRIPT,
+            TAGS.HTML,
+            TAGS.CSS,
+            TAGS.TAILWIND,
+            TAGS.REACT,
+            TAGS.EXPRESS,
+            TAGS.MONGODB,
+            TAGS.NODEJS,
+            TAGS.AWS,
+        ],
+    },
 ];
 ---
 
 {
     PROJECTS.map(({ title, description, tags, image, link }) => (
-        <article>
+        <article class="mt-10">
             <h3 class="text-xl font-semibold text-yellow-200 mb-2">{title}</h3>
             <p class="text-lg mb-4 text-pretty text-white">{description}</p>
             <ul class="flex gap-x-2 flex-row mb-4">
